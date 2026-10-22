@@ -15,8 +15,13 @@ The app checks every file against the SHA-256 written in its own data catalog be
 | `structures-afdb_v6_long_fragments.tar.gz` | AlphaFold DB v6 models of the 214 human proteins longer than 2,700 residues (fragments, one in five) | 228 MB |
 | `ppi-ppi_string12.5_biogrid.tar.gz` | Physical protein interactions: STRING 12.5 (score ≥ 400) and BioGRID multi-validated pairs | 4 MB |
 
-Genome sequence and gene annotation (BSgenome.Hsapiens.UCSC.hg38 1.4.5, TxDb.Hsapiens.UCSC.hg38.knownGene
-3.22.0, org.Hs.eg.db 3.22.0) are downloaded by the app directly from Bioconductor 3.22.
+| `BSgenome.Hsapiens.UCSC.hg38_1.4.5.tar.gz` | Human genome sequence GRCh38/hg38 (Bioconductor 3.22 package, unchanged) | 731 MB |
+| `TxDb.Hsapiens.UCSC.hg38.knownGene_3.22.0.tar.gz` | Gene annotation, UCSC knownGene (Bioconductor 3.22 package, unchanged) | 60 MB |
+| `org.Hs.eg.db_3.22.0.tar.gz` | Gene identifiers and symbols (Bioconductor 3.22 package, unchanged) | 105 MB |
+
+The three Bioconductor packages are byte-for-byte the files published by Bioconductor (same MD5); they are
+mirrored here so that the first launch of the app does not depend on the speed of a single server. If this
+repository cannot be reached, the app downloads them from bioconductor.org.
 
 Checksums: `SHA256SUMS` in each release.
 
@@ -33,6 +38,7 @@ Each dataset keeps the licence of its source. Please cite the sources when you u
 | AlphaFold DB | EMBL-EBI / Google DeepMind | CC BY 4.0 | Varadi M et al. Nucleic Acids Res 2024 |
 | STRING | STRING consortium | CC BY 4.0 | Szklarczyk D et al. Nucleic Acids Res 2023 |
 | BioGRID | BioGRID | MIT | Oughtred R et al. Protein Sci 2021 |
+| BSgenome, TxDb, org.Hs.eg.db | Bioconductor (data from UCSC and NCBI) | Artistic-2.0 | Huber W et al. Nat Methods 2015 |
 
 The files were reformatted for beatlas (for example: ClinVar reduced to single-base variants and to the
 fields used, AlphaFold models split into fragments); the content is otherwise unchanged. Each archive
