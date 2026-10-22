@@ -14,7 +14,6 @@ The app checks every file against the SHA-256 written in its own data catalog be
 | `reference-hg38_mane1.5_appris2026_06_cv20261011_up2026_03.tar.gz` | ClinVar 2026-10-11 (single-base variants, GRCh38), MANE Select 1.5 and APPRIS 2026_06 transcript ranking, UniProt 2026_03 human reviewed entries and features | 59 MB |
 | `structures-afdb_v6_long_fragments.tar.gz` | AlphaFold DB v6 models of the 214 human proteins longer than 2,700 residues (fragments, one in five) | 228 MB |
 | `ppi-ppi_string12.5_biogrid.tar.gz` | Physical protein interactions: STRING 12.5 (score ≥ 400) and BioGRID multi-validated pairs | 4 MB |
-
 | `BSgenome.Hsapiens.UCSC.hg38_1.4.5.tar.gz` | Human genome sequence GRCh38/hg38 (Bioconductor 3.22 package, unchanged) | 731 MB |
 | `TxDb.Hsapiens.UCSC.hg38.knownGene_3.22.0.tar.gz` | Gene annotation, UCSC knownGene (Bioconductor 3.22 package, unchanged) | 60 MB |
 | `org.Hs.eg.db_3.22.0.tar.gz` | Gene identifiers and symbols (Bioconductor 3.22 package, unchanged) | 105 MB |
