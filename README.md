@@ -14,6 +14,7 @@ The app checks every file against the SHA-256 written in its own data catalog be
 | `reference-hg38_mane1.5_appris2026_06_cv20261011_up2026_03.tar.gz` | ClinVar 2026-10-11 (single-base variants, GRCh38), MANE Select 1.5 and APPRIS 2026_06 transcript ranking, UniProt 2026_03 human reviewed entries and features | 59 MB |
 | `structures-afdb_v6_long_fragments.tar.gz` | AlphaFold DB v6 models of the 214 human proteins longer than 2,700 residues (fragments, one in five) | 228 MB |
 | `ppi-ppi_string12.5_biogrid.tar.gz` | Physical protein interactions: STRING 12.5 (score ≥ 400) and BioGRID multi-validated pairs | 4 MB |
+| `predictors-predictors_v1.tar.gz` | Editing outcome predictors: DeepBaseEditor (CBE efficiency, CBE and ABE outcome proportions) and BE-DICT (BE4max, Target-AID, ABEmax, ABE8e), the published models converted to ONNX and checked against the original code (added 2026-10-23) | 54 MB |
 | `BSgenome.Hsapiens.UCSC.hg38_1.4.5.tar.gz` | Human genome sequence GRCh38/hg38 (Bioconductor 3.22 package, unchanged) | 731 MB |
 | `TxDb.Hsapiens.UCSC.hg38.knownGene_3.22.0.tar.gz` | Gene annotation, UCSC knownGene (Bioconductor 3.22 package, unchanged) | 60 MB |
 | `org.Hs.eg.db_3.22.0.tar.gz` | Gene identifiers and symbols (Bioconductor 3.22 package, unchanged) | 105 MB |
@@ -37,6 +38,8 @@ Each dataset keeps the licence of its source. Please cite the sources when you u
 | AlphaFold DB | EMBL-EBI / Google DeepMind | CC BY 4.0 | Varadi M et al. Nucleic Acids Res 2024 |
 | STRING | STRING consortium | CC BY 4.0 | Szklarczyk D et al. Nucleic Acids Res 2023 |
 | BioGRID | BioGRID | MIT | Oughtred R et al. Protein Sci 2021 |
+| DeepBaseEditor | Song et al., github.com/MyungjaeSong/Paired-Library | MIT | Song M et al. Nat Biotechnol 2020 |
+| BE-DICT | Marquart et al., github.com/uzh-dqbm-cmi/crispr | MIT | Marquart KF et al. Nat Commun 2021 |
 | BSgenome, TxDb, org.Hs.eg.db | Bioconductor (data from UCSC and NCBI) | Artistic-2.0 | Huber W et al. Nat Methods 2015 |
 
 The files were reformatted for beatlas (for example: ClinVar reduced to single-base variants and to the
@@ -47,3 +50,4 @@ contains a `manifest.json` with the exact source versions and checksums.
 
 beatlas and these data are for research. Predicted editing outcomes are possibilities, not measured
 frequencies, and the annotations are not a clinical interpretation.
+
