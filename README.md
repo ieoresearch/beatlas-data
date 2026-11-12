@@ -1,8 +1,8 @@
 # beatlas data
 
 Reference data downloaded by the **beatlas** desktop app the first time it starts. beatlas lists every
-editing outcome of the guides of a base editing library and annotates it on genes, proteins, ClinVar
-and protein domains. The analysis runs on the user's computer: libraries and results never leave it.
+editing outcome of the guides of a base editing library and annotates it on genes, proteins, ClinVar,
+protein domains and interaction interfaces. The analysis runs on the user's computer: libraries and results never leave it.
 
 This repository contains **only data releases**, assembled from public sources. There is no code here.
 The app checks every file against the SHA-256 written in its own data catalog before using it.
@@ -15,6 +15,7 @@ The app checks every file against the SHA-256 written in its own data catalog be
 | `protein_features-domains_up2026_03_ens116_intact2026-01-14.tar.gz` | Protein features at each residue: UniProt 2026_03 features (domains, regions, sites, modified residues) and isoform sequences, Ensembl 116 proteins (to match each transcript to its UniProt isoform), IntAct mutations with an effect on interactions (added 2026-10-26) | 22 MB |
 | `structures-afdb_v6_long_fragments.tar.gz` | AlphaFold DB v6 models of the 214 human proteins longer than 2,700 residues (fragments, one in five) | 228 MB |
 | `ppi-ppi_string12.5_biogrid.tar.gz` | Physical protein interactions: STRING 12.5 (score ≥ 400) and BioGRID multi-validated pairs | 4 MB |
+| `interfaces-interfaces_pdbekb_2026-11.tar.gz` | Residues at interaction interfaces: for the 6,964 human Swiss-Prot proteins with an interface in an experimental PDB structure, the residues in contact with the same protein, another human protein, DNA or RNA (PDBe-KB, PISA; non-human partners excluded) (added 2026-11-12) | 4 MB |
 | `predictors-predictors_v1.tar.gz` | Editing outcome predictors: DeepBaseEditor (CBE efficiency, CBE and ABE outcome proportions) and BE-DICT (BE4max, Target-AID, ABEmax, ABE8e), the published models converted to ONNX and checked against the original code (added 2026-10-23) | 54 MB |
 | `BSgenome.Hsapiens.UCSC.hg38_1.4.5.tar.gz` | Human genome sequence GRCh38/hg38 (Bioconductor 3.22 package, unchanged) | 731 MB |
 | `TxDb.Hsapiens.UCSC.hg38.knownGene_3.22.0.tar.gz` | Gene annotation, UCSC knownGene (Bioconductor 3.22 package, unchanged) | 60 MB |
@@ -41,6 +42,7 @@ Each dataset keeps the licence of its source. Please cite the sources when you u
 | BioGRID | BioGRID | MIT | Oughtred R et al. Protein Sci 2021 |
 | Ensembl | EMBL-EBI | no restrictions (Ensembl data policy) | Dyer SC et al. Nucleic Acids Res 2025 |
 | IntAct | EMBL-EBI | CC BY 4.0 | Del Toro N et al. Nucleic Acids Res 2022 |
+| PDBe-KB interface residues | PDBe / EMBL-EBI | CC BY 4.0 | PDBe-KB consortium, Nucleic Acids Res 2022 |
 | DeepBaseEditor | Song et al., github.com/MyungjaeSong/Paired-Library | MIT | Song M et al. Nat Biotechnol 2020 |
 | BE-DICT | Marquart et al., github.com/uzh-dqbm-cmi/crispr | MIT | Marquart KF et al. Nat Commun 2021 |
 | BSgenome, TxDb, org.Hs.eg.db | Bioconductor (data from UCSC and NCBI) | Artistic-2.0 | Huber W et al. Nat Methods 2015 |
